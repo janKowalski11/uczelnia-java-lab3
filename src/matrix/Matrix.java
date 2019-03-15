@@ -4,7 +4,10 @@ Author: BeGieU
 Date: 14.03.2019
 */
 
-public class Matrix<T extends Number>
+import java.util.Iterator;
+import java.util.function.Consumer;
+
+public class Matrix<T extends Number> implements Iterator<T>
 {
     private T[][] elementsArr;
     private int rows;
@@ -71,6 +74,29 @@ public class Matrix<T extends Number>
         return arr;
     }
 
+    @Override
+    public boolean hasNext()
+    {
+        return false;
+    }
+
+    @Override
+    public T next()
+    {
+        return null;
+    }
+
+    @Override
+    public void remove()
+    {
+
+    }
+
+    @Override
+    public void forEachRemaining(Consumer<? super T> action)
+    {
+
+    }
 
     public static void main(String[] args)
     {
