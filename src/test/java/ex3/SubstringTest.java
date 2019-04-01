@@ -48,4 +48,14 @@ public class SubstringTest {
         assertEquals(2,substring.substring("abcd", "dabcd"));
         //returned value should be equal to 2
     }
+
+    @Test
+    public void testIncompletePreFix() {
+        assertEquals(-1,substring.substring("abcd", "cbaabcd"));
+    }
+
+    @Test
+    public void testIncompletePostFix() {
+        assertEquals(-1,substring.substring("abcd", "abcddcb"));
+    }
 }
